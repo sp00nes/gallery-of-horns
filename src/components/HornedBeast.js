@@ -1,6 +1,7 @@
 import React from 'react';
 import heartBlack from '../img/lovehearttransparentpngblack.png';
 import heartRed from '../img/love-heart-transparent-png.png';
+import Button from 'react-bootstrap/Button';
 import './HornedBeast.css';
 
 const imagesPath = {heartBlack,heartRed}
@@ -10,6 +11,7 @@ class HornedBeast extends React.Component {
     super(props);
     this.state = {
       favorite: false,
+      votes: 0
     };
   }
 
@@ -18,6 +20,14 @@ class HornedBeast extends React.Component {
   };
 
   getImageName = () => this.state.favorite ? 'heartRed' : 'heartBlack'
+
+  handleVotes = () => {
+    this.setState({
+      votes: this.state.votes + 1
+    });
+    
+  };
+
 
   render() {
     let imageName = this.getImageName();
@@ -37,6 +47,8 @@ class HornedBeast extends React.Component {
           alt={this.props.name}
         />
         <p>{this.props.info}</p>
+        <Button onClick={this.handleVotes}>Vote</Button>
+        <p>{this.state.votes}</p>
       </article>
     )
   }
