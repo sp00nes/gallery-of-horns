@@ -1,6 +1,7 @@
 import React from 'react';
 import data from './horned-beasts.json';
 import HornedBeast from './HornedBeast.js';
+import './Main.css';
 
 class Main extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class Main extends React.Component {
         <HornedBeast
           name={beastData.title}
           imageURL={beastData.image_url}
+          info={beastData.description}
           key={idx}
         />
       )
