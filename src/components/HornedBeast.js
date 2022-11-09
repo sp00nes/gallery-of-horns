@@ -1,6 +1,6 @@
 import React from 'react';
-import heartBlack from './lovehearttransparentpngblack.png';
-import heartRed from './love-heart-transparent-png.png';
+import heartBlack from '../img/lovehearttransparentpngblack.png';
+import heartRed from '../img/love-heart-transparent-png.png';
 import './HornedBeast.css';
 
 const imagesPath = {heartBlack,heartRed}
