@@ -25,16 +25,18 @@ class HornedBeast extends React.Component {
     this.setState({
       votes: this.state.votes + 1
     });
-    
   };
 
+  handleTitleClick = () => {
+    this.props.handleOpenModal(this.props.name, this.props.id);
+  }
 
   render() {
     let imageName = this.getImageName();
     return (
       <article>
         <div className='title'>
-        <h2>{this.props.name}</h2>
+        <h2 onClick={this.handleTitleClick}>{this.props.name}</h2>
         <img
           onClick={this.handleClick}
           className='favorite'
