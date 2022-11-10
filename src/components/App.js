@@ -10,7 +10,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       isModalShown: false,
-      name: ''
+      id: 0
     }
   }
 
@@ -20,10 +20,12 @@ class App extends React.Component {
     });
   };
 
-  handleOpenModal = (name) => {
+  handleOpenModal = (name, id) => {
+    console.log(id);
     this.setState({
       isModalShown: true,
-      name: name
+      name: name,
+      id: id
     });
   };
 
@@ -39,7 +41,8 @@ class App extends React.Component {
         <SelectedBeast 
           isModalShown={this.state.isModalShown}
           handleCloseModal={this.handleCloseModal}
-          name={this.state.name}
+          ID={data[this.state.id]._id}
+          data={data}
         />
       </>
     );

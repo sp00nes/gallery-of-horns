@@ -28,7 +28,7 @@ class HornedBeast extends React.Component {
   };
 
   handleTitleClick = () => {
-    this.props.handleOpenModal(this.props.name);
+    this.props.handleOpenModal(this.props.name, this.props.id);
   }
 
   render() {

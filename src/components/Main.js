@@ -1,5 +1,4 @@
 import React from 'react';
-
 import HornedBeast from './HornedBeast.js';
 import './Main.css';
 
@@ -11,10 +10,12 @@ class Main extends React.Component {
         name={beastData.title}
         imageURL={beastData.image_url}
         info={beastData.description}
+        id={beastData._id}
         key={idx}
         handleOpenModal={this.props.handleOpenModal}
       />
     });
+    console.log(beastArray);
 
     return (
       <main>

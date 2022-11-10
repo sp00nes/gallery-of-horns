@@ -1,8 +1,10 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal'
+import HornedBeast from './HornedBeast';
 
 class SelectedBeast extends React.Component {
   render(){
+    let beastData = this.props.data[this.props.ID];
     return (
       <>
         <Modal 
@@ -10,7 +12,13 @@ class SelectedBeast extends React.Component {
           onHide={this.props.handleCloseModal}  
         >
           <Modal.Header closeButton>
-            <Modal.Title>{this.props.name}</Modal.Title>
+            <Modal.Body>
+              <HornedBeast 
+                name={beastData.title}
+                imageURL={beastData.image_url}
+                info={beastData.description}
+              />
+            </Modal.Body>
           </Modal.Header>
         </Modal>
       </>
