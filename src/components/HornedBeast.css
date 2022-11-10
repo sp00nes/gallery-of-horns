@@ -20,15 +20,6 @@ article p {
   margin-bottom: .5rem;
 }
 
-article p:last-of-type {
-  padding-left: 1rem;
-  cursor: pointer;
-}
-
-article p:last-of-type:hover {
-  color: purple;
-}
-
 .favorite {
   width: 7rem;
 }
