@@ -1,16 +1,17 @@
 import React from 'react';
 import Header from './Header.js';
-import Main from './Main.js';
 import Footer from './Footer.js';
 import data from '../horned-beasts.json';
 import SelectedBeast from './SelectedBeast.js';
+import Main from './Main.js';
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isModalShown: false,
-      id: 0
+      id: 0,
     }
   }
 
@@ -29,16 +30,18 @@ class App extends React.Component {
     });
   };
 
+  // --RENDER-- //
   render() {
     return (
       <>
-        <Header/>
+        <Header>
+        </Header>
         <Main
           handleOpenModal={this.handleOpenModal}
           data={data}
         />
-        <Footer/>
-        <SelectedBeast 
+        <Footer />
+        <SelectedBeast
           isModalShown={this.state.isModalShown}
           handleCloseModal={this.handleCloseModal}
           ID={data[this.state.id]._id}

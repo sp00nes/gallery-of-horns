@@ -2,7 +2,8 @@ article {
   border: 1px solid gray;
   padding: 1vw;
   margin-bottom: 1vw;
-  width: 19%;
+  width: 23rem;
+  min-height: 40rem;
 }
 
 article h3 {
