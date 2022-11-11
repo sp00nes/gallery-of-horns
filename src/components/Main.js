@@ -15,7 +15,6 @@ class Main extends React.Component {
         handleOpenModal={this.props.handleOpenModal}
       />
     });
-    console.log(beastArray);
 
     return (
       <main>
